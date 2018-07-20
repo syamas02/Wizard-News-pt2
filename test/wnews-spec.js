@@ -1,1 +1,4 @@
-console.log(process.env.DATABSE_URL);
+// const expect = require('chai').expect;
+// const db = require('../db/index');
+
+console.log(process.env.DATABASE_URL);

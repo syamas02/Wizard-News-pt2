@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "DATABASE_URL=postgres://localhost/wnews nodemon ./node_modules/mocha/bin/mocha",
     "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.14.7"
+    "nodemon": "^1.18.3"
   },
   "dependencies": {
-    "express": "^4.16.2",
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
     "html-template-tag": "^1.0.0",
+    "mocha": "^5.2.0",
     "morgan": "^1.9.0",
     "node-time-ago": "^1.0.0",
     "pg": "^7.4.3"
