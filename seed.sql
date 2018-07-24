@@ -1,4 +1,4 @@
-TRUNCATE TABLE users, posts;
+TRUNCATE TABLE users, posts,upvotes;
 
 INSERT INTO users (name) VALUES ('RubeusH');
 INSERT INTO users (name) VALUES ('Baddock');

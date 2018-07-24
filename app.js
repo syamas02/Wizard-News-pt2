@@ -11,7 +11,8 @@ module.exports = app;
 // app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
-const sql = 'SELECT * FROM posts';
+const sql =
+  'SELECT posts.*, counting.upvotes FROM posts INNER JOIN (SELECT postId, COUNT(*) as upvotes FROM upvotes GROUP BY postId) AS counting ON posts.id = counting.postId';
 app.get('/', async (req, res, next) => {
   try {
     const data = await client.query(sql);
